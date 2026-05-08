@@ -82,18 +82,20 @@
     .option {
       border: 2px solid #cbd5e1;
       border-radius: 16px;
-      padding: 17px 10px;
+      padding: 16px 10px;
       text-align: center;
       font-size: 19px;
       cursor: pointer;
-      min-height: 74px;
+      min-height: 82px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       user-select: none;
+      line-height: 1.25;
     }
-    .small { font-size: 13px; margin-top: 4px; color: inherit; }
+    .emoji { font-size: 24px; margin-bottom: 4px; }
+    .small { font-size: 13px; margin-top: 4px; color: inherit; font-weight: bold; }
     input[name="usual"]:checked + .option { background: #2563eb; color: white; border-color: #2563eb; }
     input[name="preferred"]:checked + .option { background: #16a34a; color: white; border-color: #16a34a; }
     .counter {
@@ -163,22 +165,22 @@
       <form id="surveyForm">
         <h3>How do you usually travel to school?</h3>
         <div class="grid">
-          <label><input type="radio" name="usual" value="Walk" required><div class="option">Walk</div></label>
-          <label><input type="radio" name="usual" value="Bus"><div class="option">Bus</div></label>
-          <label><input type="radio" name="usual" value="Train"><div class="option">Train</div></label>
-          <label><input type="radio" name="usual" value="Cycle"><div class="option">Cycle</div></label>
-          <label><input type="radio" name="usual" value="Park and Stride"><div class="option">Park and Stride<span class="small">walk more than 10 mins</span></div></label>
-          <label><input type="radio" name="usual" value="Car"><div class="option">Car<span class="small">walk less than 10 mins</span></div></label>
+          <label><input type="radio" name="usual" value="Walk" required><div class="option"><span class="emoji">🚶</span>Walk</div></label>
+          <label><input type="radio" name="usual" value="Bus"><div class="option"><span class="emoji">🚌</span>Bus</div></label>
+          <label><input type="radio" name="usual" value="Train"><div class="option"><span class="emoji">🚆</span>Train</div></label>
+          <label><input type="radio" name="usual" value="Cycle"><div class="option"><span class="emoji">🚲</span>Cycle</div></label>
+          <label><input type="radio" name="usual" value="Park and Stride"><div class="option"><span class="emoji">🚗🚶</span>Car — dropped off further away<span class="small">walk 10+ mins</span></div></label>
+          <label><input type="radio" name="usual" value="Car"><div class="option"><span class="emoji">🚗⬇️</span>Car — dropped off near school<span class="small">walk less than 10 mins</span></div></label>
         </div>
 
         <h3>How would you prefer to travel to school?</h3>
         <div class="grid">
-          <label><input type="radio" name="preferred" value="Walk" required><div class="option">Walk</div></label>
-          <label><input type="radio" name="preferred" value="Bus"><div class="option">Bus</div></label>
-          <label><input type="radio" name="preferred" value="Train"><div class="option">Train</div></label>
-          <label><input type="radio" name="preferred" value="Cycle"><div class="option">Cycle</div></label>
-          <label><input type="radio" name="preferred" value="Park and Stride"><div class="option">Park and Stride<span class="small">walk more than 10 mins</span></div></label>
-          <label><input type="radio" name="preferred" value="Car"><div class="option">Car<span class="small">walk less than 10 mins</span></div></label>
+          <label><input type="radio" name="preferred" value="Walk" required><div class="option"><span class="emoji">🚶</span>Walk</div></label>
+          <label><input type="radio" name="preferred" value="Bus"><div class="option"><span class="emoji">🚌</span>Bus</div></label>
+          <label><input type="radio" name="preferred" value="Train"><div class="option"><span class="emoji">🚆</span>Train</div></label>
+          <label><input type="radio" name="preferred" value="Cycle"><div class="option"><span class="emoji">🚲</span>Cycle</div></label>
+          <label><input type="radio" name="preferred" value="Park and Stride"><div class="option"><span class="emoji">🚗🚶</span>Car — dropped off further away<span class="small">walk 10+ mins</span></div></label>
+          <label><input type="radio" name="preferred" value="Car"><div class="option"><span class="emoji">🚗⬇️</span>Car — dropped off near school<span class="small">walk less than 10 mins</span></div></label>
         </div>
 
         <button class="submit" type="submit">Submit</button>
